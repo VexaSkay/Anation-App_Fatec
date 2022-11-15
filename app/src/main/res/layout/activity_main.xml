@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/logar"
-        android:text="Entrar"
+        android:text="Anation"
         android:textColor="@color/white"
         android:textSize="35dp"
         android:textStyle="bold"
@@ -53,7 +53,7 @@
         android:id="@+id/login_btn"
         android:layout_below="@id/senha"
         android:text="Entrar"
-        android:backgroundTint="@color/design_default_color_secondary"
+        android:backgroundTint="#2196F3"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp" />
 
