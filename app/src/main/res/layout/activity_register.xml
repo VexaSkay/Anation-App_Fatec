@@ -5,111 +5,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_initial"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/logar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/register_title"
+        android:text="ANATION"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="ANATION"
-        android:textColor="@color/white"
-        android:textSize="35dp"
-        android:textStyle="bold" />
-
+        />
     <EditText
-        android:id="@+id/usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logar"
+        android:id="@+id/register_email"
+        android:layout_below="@id/register_title"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Seu Email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/rounded_edittext"
-        android:drawableLeft="@drawable/icon_user"
-        android:drawablePadding="20dp"
-        android:hint="Email ou Usuário"
         android:padding="20dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-
-       />
-
+        android:drawableLeft="@drawable/icon_email"
+        android:drawablePadding="20dp"
+        />
     <EditText
-        android:id="@+id/senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/usuario"
+        android:id="@+id/register_user"
+        android:layout_below="@id/register_email"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Seu Usuário"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/rounded_edittext"
-        android:drawableLeft="@drawable/ic_baseline_password_24"
-        android:drawablePadding="20dp"
-        android:hint="Senha"
-        android:inputType="textPassword"
         android:padding="20dp"
+        android:drawableLeft="@drawable/icon_user"
+        android:drawablePadding="20dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_password"
+        android:layout_below="@id/register_user"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Sua Senha"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"
-        android:textColorHint="@color/white" />
-
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/icon_password"
+        android:drawablePadding="20dp"
+        android:inputType="textPassword"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_re_password"
+        android:layout_below="@id/register_password"
+        android:background="@drawable/rounded_edittext"
+        android:hint="Sua Senha Novamente"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:drawableLeft="@drawable/icon_password"
+        android:drawablePadding="20dp"
+        android:inputType="textPassword"
+        />
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/login_btn"
+        android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/senha"
+        android:layout_below="@id/register_re_password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/main_red"
-        android:text="Entrar" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:gravity="center"
-        android:layout_below="@id/login_btn">
-
-        <TextView
-            android:id="@+id/cadastro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/login_btn"
-            android:text="Cadastre-se aqui!"
-            android:layout_marginRight="65dp"
-            android:textColor="@color/main_red" />
-
-        <TextView
-            android:id="@+id/esqueci_senha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/login_btn"
-            android:text="Esqueceu a senha?"
-            android:layout_marginLeft="65dp"
-            android:textColor="@color/white" />
-
-    </LinearLayout>
-
-
+        android:text="Registrar" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/redes_sociais_icones"
         android:id="@+id/icones_login"
-        android:text="Entre com:"
+        android:text="Registre-se com:"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,10 +130,5 @@
             android:src="@drawable/fb"
             android:layout_margin="20dp"/>
     </LinearLayout>
-
-
-
-
-
 
 </RelativeLayout>
