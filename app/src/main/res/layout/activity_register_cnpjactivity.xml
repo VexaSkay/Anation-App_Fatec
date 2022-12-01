@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_initial"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterCNPJActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
         android:id="@+id/register_email"
         android:layout_below="@id/register_title"
         android:background="@drawable/rounded_edittext"
-        android:hint="Seu Email"
+        android:hint="Email da empresa"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
@@ -44,7 +44,7 @@
         android:id="@+id/register_user"
         android:layout_below="@id/register_email"
         android:background="@drawable/rounded_edittext"
-        android:hint="Seu Usuário"
+        android:hint="Nome da empresa"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/register_password"
-        android:layout_below="@id/register_user"
+        android:layout_below="@id/cnpj_box"
         android:background="@drawable/rounded_edittext"
         android:hint="Sua Senha"
         android:textColorHint="@color/white"
@@ -73,31 +73,31 @@
         android:drawablePadding="20dp"
         android:inputType="textPassword"
         />
-<!--    <EditText-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/register_re_password"-->
-<!--        android:layout_below="@id/register_password"-->
-<!--        android:background="@drawable/rounded_edittext"-->
-<!--        android:hint="Sua Senha Novamente"-->
-<!--        android:textColorHint="@color/white"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginTop="2dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:padding="20dp"-->
-<!--        android:drawableLeft="@drawable/icon_password"-->
-<!--        android:drawablePadding="20dp"-->
-<!--        android:inputType="textPassword"-->
-<!--        />-->
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/register_re_password"-->
+    <!--        android:layout_below="@id/register_password"-->
+    <!--        android:background="@drawable/rounded_edittext"-->
+    <!--        android:hint="Sua Senha Novamente"-->
+    <!--        android:textColorHint="@color/white"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:layout_marginTop="2dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:padding="20dp"-->
+    <!--        android:drawableLeft="@drawable/icon_password"-->
+    <!--        android:drawablePadding="20dp"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        />-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/age_data"
-        android:layout_below="@id/register_password"
+        android:id="@+id/cnpj_box"
+        android:layout_below="@id/register_user"
         android:background="@drawable/rounded_edittext"
-        android:hint="Data de Nascimento"
+        android:hint="CNPJ"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:layout_marginStart="20dp"
@@ -105,7 +105,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
         android:padding="20dp"
-        android:drawableLeft="@drawable/icon_calendar"
+        android:drawableLeft="@drawable/icon_cnpj"
         android:drawablePadding="20dp"
         android:inputType="textPassword"
         />
@@ -113,7 +113,7 @@
         android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/age_data"
+        android:layout_below="@id/register_password"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="1dp"
@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/register_btn"
         android:id="@+id/cadastro_empresa"
-        android:text="Quero uma conta para minha empresa!"
+        android:text="Voltar para tela de cadastro."
         android:textColor="@color/main_red"
         android:layout_centerHorizontal="true"
         />
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/redes_sociais_icones"
         android:id="@+id/icones_login"
-        android:text="Registre-se com:"
+        android:text="Registre sua empresa com:"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         />
@@ -151,11 +151,6 @@
             android:src="@drawable/google"
             android:layout_margin="20dp"
             />
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/fb"
-            android:layout_margin="20dp"/>
     </LinearLayout>
 
 </RelativeLayout>
