@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_initial"
+    tools:context=".DashboardActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_red"
+        android:id="@+id/username_text"
+        android:text="Nicolas Schianti"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_effect"
+        android:layout_below="@id/username_text"
+        android:id="@+id/layout_text_saldo"
+        android:paddingTop="13dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_saldo"
+            android:text="seu saldo:"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_effect"
+        android:layout_below="@id/layout_text_saldo"
+        android:id="@+id/layout_saldo">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saldo_dashboard"
+        android:text="R$ 000000"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_effect"
+        android:layout_below="@id/layout_saldo"
+        android:id="@+id/layout_movimentos"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+000"
+            android:textColor="#8BC34A"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"
+            android:drawableLeft="@drawable/icon_arrow_up"
+            android:drawablePadding="2dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-000"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:drawableLeft="@drawable/icon_arrow_down"
+            android:drawablePadding="2dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="atualizações:"
+        android:layout_below="@id/layout_movimentos"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/atualizacoes_txt"
+        android:textSize="15dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/atualizacoes_txt"
+        android:background="@drawable/rounded_edittext"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:id="@+id/card_cartao">
+
+        <TextView
+            android:id="@+id/cartao_credito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CARTAO DE CREDITO"
+            android:textColor="#B8B8B8"
+            />
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="FECHA DIA 00"/>
+        <TextView
+            android:id="@+id/banco"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cartao_credito"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/vencimento"
+            android:text="BANCO"
+            />
+        <TextView
+            android:id="@id/vencimento"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cartao_credito"
+            android:layout_alignParentRight="true"
+            android:text="VENCE DIA 00"/>
+        <TextView
+            android:id="@+id/saldo_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/banco"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/fatura_aberta"
+            android:text="R$ 00,00"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@id/fatura_aberta"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_below="@id/vencimento"
+            android:layout_alignParentRight="true"
+            android:text="FATURA ABERTA"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/card_cartao"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edittext"
+            android:id="@+id/card_transferencias"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/card_alertas"
+            android:layout_marginRight="5dp"
+            >
+
+            <TextView
+                android:id="@+id/data_atual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DIA 21 | NOVEMBRO"
+                android:textColor="#B8B8B8"
+                />
+            <TextView
+                android:id="@+id/entradas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/data_atual"
+                android:layout_alignParentLeft="true"
+                android:text="ENTRADAS:"
+                android:textColor="@color/green"
+
+                />
+            <TextView
+                android:id="@+id/saidas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entradas"
+                android:layout_alignParentLeft="true"
+                android:text="SAÍDAS:"
+                android:textColor="@color/red"
+                />
+            <TextView
+                android:id="@+id/titulo_transf"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/saidas"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:text="TRANSFERÊNCIAS HOJE"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="192dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edittext"
+            android:id="@+id/card_alertas"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ALERTAS"
+                android:textColor="@color/gray_text"
+                android:id="@+id/alertas_txt"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alertas_txt"
+                android:layout_alignParentRight="true"
+                android:text="Você possui R$ 00,00 de limite no seu cartão!"
+                android:textAlignment="textEnd"/>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    </RelativeLayout>

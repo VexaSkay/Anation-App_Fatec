@@ -155,7 +155,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/fb"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp" />
     </LinearLayout>
 
 </RelativeLayout>
