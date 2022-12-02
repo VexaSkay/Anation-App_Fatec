@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item android:title="Contas"
+            android:icon="@drawable/icon_menu_contas"
+            android:id="@+id/menu_contas"
+            android:iconTint="@color/white"
+            />
+        <item android:title="Cartões"
+            android:icon="@drawable/icon_menu_card"
+            android:id="@+id/menu_cartoes"
+            android:iconTint="@color/white"
+            />
+        <item android:title="Dashboard"
+            android:icon="@drawable/icon_menu_dashboard"
+            android:id="@+id/menu_dashboard"
+            android:iconTint="@color/white"
+            />
+        <item android:title="Carteira"
+            android:icon="@drawable/icon_menu_wallet"
+            android:id="@+id/menu_carteira"
+            android:iconTint="@color/white"
+            />
+        <item android:title="Relatórios"
+            android:icon="@drawable/icon_menu_relatorios"
+            android:id="@+id/menu_relatorios"
+            android:iconTint="@color/white"
+            />
+</menu>
