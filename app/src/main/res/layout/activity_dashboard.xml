@@ -177,7 +177,8 @@
         android:layout_below="@id/card_cartao"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp">
+        android:layout_marginRight="12dp"
+        android:id="@+id/cards">
 
 
         <RelativeLayout
@@ -250,13 +251,20 @@
                 android:layout_alignParentRight="true"
                 android:text="Você possui R$ 00,00 de limite no seu cartão!"
                 android:textAlignment="textEnd"/>
-
-
         </RelativeLayout>
-
-
-
     </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cards"
+        android:id="@+id/historico_transferencias"
+        android:backgroundTint="@color/gray_effect"
+        android:text="VERIFICAR TRANSFERÊNCIAS"
+        android:textStyle="bold"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"/>
 
 
     </RelativeLayout>
