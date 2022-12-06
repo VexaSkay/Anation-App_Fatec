@@ -2,6 +2,7 @@ package com.calculadora.anation_project_fatec;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialButton loginbtn = (MaterialButton) findViewById(R.id.login_btn);
 
+        TextView cadastroScreen = (TextView) findViewById(R.id.ir_para_cadastro);
+
         //admin and admin
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -34,5 +37,15 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Login falhou",Toast.LENGTH_SHORT).show();
             }
         });
+
+        cadastroScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
